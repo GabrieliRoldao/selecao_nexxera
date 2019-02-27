@@ -11,7 +11,6 @@ Para instalar as dependências, rodas comando
 ```
 mvn install
 ```
-http://localhost:8080/swagger-ui.html#/
 
 ## Built With
 
