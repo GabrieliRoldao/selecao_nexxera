@@ -1,10 +1,7 @@
 package br.com.banconix.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
@@ -17,20 +14,20 @@ public class User implements Serializable {
 
 
     @Column(length = 128, nullable = false)
-    private String nome;
+    private String name;
 
 
     @Column(length = 14, nullable = false)
     private String cnpj;
 
-    public User(String nome, String cnpj) {
-        this.nome = nome;
+    public User(String name, String cnpj) {
+        this.name = name;
         this.cnpj = cnpj;
     }
 
-    public User(Long id, String nome, String cnpj) {
+    public User(Long id, String name, String cnpj) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.cnpj = cnpj;
     }
 
@@ -41,12 +38,12 @@ public class User implements Serializable {
         return id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCnpj() {
